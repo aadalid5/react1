@@ -22,20 +22,40 @@ class Cardlist extends React.Component{
         
     }
 
+    showCards(user, i){
+        return(
+            <Card name={user.name} email={user.email} id={user.id}/>
+            );
+
+    }
+
     render(){
         return (
             <div>
                 {/* without using the constructor ---> */ }
                 {/* <Card name={this.props.robots[0].name} email={this.props.robots[0].email} id={this.props.robots[0].id}/> */}
                 
-                {/*(1) other method, using the constructor, asign individualy */}
+                {/*(1) other method, using the constructor, asign individualy  ----> */}
                 {/* <Card name={this.name} email={this.email} id={this.id}/> */}
 
-                {/*(2) other method, using the constructor  */}
-                <Card name={this.Urobot[0].name} email={this.Urobot[0].email} id={this.Urobot[0].id}/>
-                <Card name={this.Urobot[1].name} email={this.Urobot[1].email} id={this.Urobot[1].id}/>
-                <Card name={this.Urobot[2].name} email={this.Urobot[2].email} id={this.Urobot[2].id}/>
-                                
+                {/*(2) other method, using the constructor ----> */}
+                {/* <Card name={this.Urobot[0].name} email={this.Urobot[0].email} id={this.Urobot[0].id}/> */}
+
+                {/*(3) iterative method  ---> */}
+                {/* {this.Urobot.map((user,i) =>{
+                    return(
+                    <Card name={user.name} email={{this.Urobot.map((user,i) =>{
+                    return(
+                    <Card name={user.name} email={user.email} id={user.id}/>
+                    );
+                })
+                }ser.email} id={user.id}/>
+                    );
+                })
+                } */}
+                
+                {this.Urobot.map(this.showCards)};
+                                                               
             </div> 
         );
     }
