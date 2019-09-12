@@ -15,7 +15,7 @@ import {robots} from './userrobots';
                 </div>    
                 , document.getElementById('root')); */
 
-ReactDOM.render( <Cardlist robots={robots}/>, document.getElementById('root'));
+ReactDOM.render( <Cardlist robots={robots} color="red"/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
